@@ -1,4 +1,4 @@
-const User = require("../models/User")
+const {User} = require("../models/assosiations")
 
 exports.getAllUsers = async () => {
     return await User.findAll()
@@ -12,8 +12,8 @@ exports.createUser = async (data) => {
     const {name, password} = data
     try{
         const newUser = await User.create({
-            nome : name,
-            senha: password
+            name : name,
+            password: password
         })
         return newUser
     }catch(err){

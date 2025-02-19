@@ -7,19 +7,18 @@ const User = sequelize.define("User", {
     autoIncrement: true,
     primaryKey: true,
   },
-  nome: {
+  name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  senha: {
+  password: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-}, {
-  timestamps: true,
-  tableName: "Users",
-});
+}, 
+);
 
 // User.sync({force:true})
+
 
 module.exports = User;

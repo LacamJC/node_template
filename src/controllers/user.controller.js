@@ -29,7 +29,7 @@ exports.getUser = async (req,res) => {
             const users = await userService.getAllUsers()
             res.json(users)
         }
-    } catch(err) {
+    } catch(error) {
         res.status(500).json({message: error.message})
     }
 }
